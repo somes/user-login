@@ -6,6 +6,7 @@ import (
 
 	"github.com/spf13/viper"
 	"gorm.io/driver/mysql"
+	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
 )
@@ -34,6 +35,8 @@ func initDBConf() gorm.Dialector {
 
 	if driverName == "mysql" {
 		dialector = mysql.Open(dsn)
+	} else if driverName == "sqlite" {
+		dialector = sqlite.Open("sqlite.db")
 	}
 	return dialector
 }
