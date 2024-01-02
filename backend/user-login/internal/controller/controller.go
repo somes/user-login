@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"server/internal/common"
+	"server/internal/dto"
 	"server/internal/model"
 	"server/internal/response"
 	"server/internal/service"
@@ -17,19 +18,22 @@ func PingController(ctx *gin.Context) {
 	ctx.JSON(200, gin.H{"msg": msg})
 }
 
-func IndexController(ctx *gin.Context) {
-	ctx.HTML(http.StatusOK, "index.html", nil)
-}
-
 func LoginController(ctx *gin.Context) {
-	username := ctx.PostForm("username")
-	password := ctx.PostForm("password")
+	// username := ctx.PostForm("username")
+	// password := ctx.PostForm("password")
+	var requestBody map[string]interface{}
+	if err := ctx.ShouldBindJSON(&requestBody); err != nil {
+		response.Response(ctx, http.StatusInternalServerError, -1, nil, err.Error())
+		return
+	}
+	username := requestBody["username"].(string)
+	password := requestBody["password"].(string)
 	if len(username) == 0 || len(password) == 0 {
 		// ctx.JSON(http.StatusOK, gin.H{"code": -1, "msg": "username and password cannot be empty"})
 		response.Response(ctx, http.StatusOK, -1, nil, "username and password cannot be empty")
 		return
 	}
-	// log.Println(username, password)
+	log.Println(username, password)
 	// log.Println(ctx.Request.TLS.PeerCertificates)
 
 	DB := common.GetDB()
@@ -46,8 +50,19 @@ func LoginController(ctx *gin.Context) {
 		return
 	}
 
+	token, err := common.ReleaseToken(user)
+	if err != nil {
+		response.Response(ctx, http.StatusInternalServerError, -1, nil, "internal server error")
+		return
+	}
+
 	// ctx.JSON(http.StatusOK, gin.H{"code": 0, "msg": "login success"})
-	response.Success(ctx, nil, "login success")
+	response.Success(ctx, gin.H{"token": token}, "login success")
+}
+
+func InfoController(ctx *gin.Context) {
+	user, _ := ctx.Get("user")
+	response.Success(ctx, gin.H{"user": dto.ToUserDto(user.(model.User))}, "")
 }
 
 func LoginCertificateController(ctx *gin.Context) {
