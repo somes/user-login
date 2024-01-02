@@ -12,7 +12,8 @@ func CORSMiddleware() gin.HandlerFunc {
 		// ctx.Writer.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:8000")
 		ctx.Writer.Header().Set("Access-Control-Max-Age", "86400")
 		ctx.Writer.Header().Set("Access-Control-Allow-Methods", "GET,POST")
-		ctx.Writer.Header().Set("Access-Control-Allow-Headers", "*")
+		// ctx.Writer.Header().Set("Access-Control-Allow-Headers", "*")
+		ctx.Writer.Header().Set("Access-Control-Allow-Headers", "Authorization,Content-Type")
 		ctx.Writer.Header().Set("Access-Control-Allow-Credentials", "true")
 
 		if ctx.Request.Method == http.MethodOptions {
