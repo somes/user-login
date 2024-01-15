@@ -13,14 +13,9 @@ var tr = gin.Default()
 func CollectRoute() *gin.Engine {
 	r.Use(middleware.CORSMiddleware())
 
-	r.LoadHTMLFiles("../html/index.html")
-	r.Static("css", "../html/css")
-	r.Static("js", "../html/js")
-	r.Static("img", "../html/img")
-
 	r.GET("/ping", controller.PingController)
-	r.GET("/", controller.IndexController)
 	r.POST("/api/user/login", controller.LoginController)
+	r.GET("/api/user/info", middleware.AuthMiddleware(), controller.InfoController)
 
 	return r
 }
