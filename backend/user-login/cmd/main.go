@@ -36,7 +36,8 @@ func main() {
 
 	wg.Add(1)
 	go func() {
-		server.ListenAndServeTLS("config/certificate/servera/localhost.pem", "config/certificate/servera/localhost.key")
+		// server.ListenAndServeTLS("config/certificate/servera/localhost.pem", "config/certificate/servera/localhost.key")
+		server.ListenAndServe()
 		wg.Done()
 	}()
 
