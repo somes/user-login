@@ -19,7 +19,7 @@ func main() {
 	r := router.CollectRoute()
 	// r.Run(":8000")
 
-	tr := router.TrCollectRoute()
+// 	tr := router.TrCollectRoute()
 	// tr.Run(":8002")
 
 	server := http.Server{
@@ -28,11 +28,11 @@ func main() {
 		// TLSConfig: GetServerTlsConfig(),
 	}
 
-	twoWayServer := http.Server{
-		Addr:      ":8002",
-		Handler:   tr,
-		TLSConfig: common.GetServerTlsConfig(),
-	}
+// 	twoWayServer := http.Server{
+// 		Addr:      ":8002",
+// 		Handler:   tr,
+// 		TLSConfig: common.GetServerTlsConfig(),
+// 	}
 
 	wg.Add(1)
 	go func() {
@@ -41,11 +41,11 @@ func main() {
 		wg.Done()
 	}()
 
-	wg.Add(1)
-	go func() {
-		twoWayServer.ListenAndServeTLS("config/certificate/servera/localhost.pem", "config/certificate/servera/localhost.key")
-		wg.Done()
-	}()
+// 	wg.Add(1)
+// 	go func() {
+// 		twoWayServer.ListenAndServeTLS("config/certificate/servera/localhost.pem", "config/certificate/servera/localhost.key")
+// 		wg.Done()
+// 	}()
 
 	wg.Wait()
 
