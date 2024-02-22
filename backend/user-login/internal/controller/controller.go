@@ -65,9 +65,9 @@ func InfoController(ctx *gin.Context) {
 	response.Success(ctx, gin.H{"user": dto.ToUserDto(user.(model.User))}, "")
 }
 
-func LoginCertificateController(ctx *gin.Context) {
-	cn := ctx.Request.TLS.PeerCertificates[0].Subject.CommonName
-	serialNumber := ctx.Request.TLS.PeerCertificates[0].SerialNumber.String()
-	hexSerialNumber := hex.EncodeToString(ctx.Request.TLS.PeerCertificates[0].SerialNumber.Bytes())
-	log.Println(cn, serialNumber, hexSerialNumber)
-}
+// func LoginCertificateController(ctx *gin.Context) {
+// 	cn := ctx.Request.TLS.PeerCertificates[0].Subject.CommonName
+// 	serialNumber := ctx.Request.TLS.PeerCertificates[0].SerialNumber.String()
+// 	hexSerialNumber := hex.EncodeToString(ctx.Request.TLS.PeerCertificates[0].SerialNumber.Bytes())
+// 	log.Println(cn, serialNumber, hexSerialNumber)
+// }
