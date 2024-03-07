@@ -23,7 +23,7 @@ func main() {
 	// tr.Run(":8002")
 
 	server := http.Server{
-		Addr:    ":8000",
+		Addr:    viper.GetString("server.port"),
 		Handler: r,
 		// TLSConfig: GetServerTlsConfig(),
 	}
