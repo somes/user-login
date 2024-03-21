@@ -7,7 +7,6 @@ import (
 )
 
 func Response(ctx *gin.Context, httpStatus int, code int, data gin.H, msg string) {
-	// ctx.JSON(httpStatus, gin.H{"code": code, "result": result, "data": data, "msg": msg})
 	ctx.JSON(httpStatus, gin.H{"code": code, "data": data, "msg": msg})
 }
 
