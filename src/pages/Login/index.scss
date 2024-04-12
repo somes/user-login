@@ -1,0 +1,40 @@
+.login {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .login-container {
+    width: 440px;
+    height: 360px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 50px rgb(0 0 0 / 10%);
+    padding: 20px;
+  }
+
+  .login-title {
+    width: 200px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  //.login-checkbox-label {
+  //  color: #1890ff;
+  //}
+
+  .ant-form-item-explain-error {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .ant-btn{
+    width: 100%;
+    margin-top: 20px;
+  }
+}
