@@ -1,0 +1,65 @@
+.ant-layout {
+  height: 100%;
+}
+
+.header {
+  padding: 0;
+  background-color: #606266;
+
+  .logo {
+    width: 200px;
+    height: 64px;
+    //background: url('~@/assets/logo.png') no-repeat center / 160px auto;
+  }
+
+  .logo::after {
+    content: 'XX管理系统';
+    display: block;
+    clear: both;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .user-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 20px;
+    color: #fff;
+
+    .user-name {
+      margin-right: 20px;
+    }
+
+    .user-logout {
+      display: inline-block;
+      cursor: pointer;
+    }
+  }
+}
+
+.ant-layout-has-sider {
+  .site-layout-background,
+  .site-layout-background .ant-menu-dark {
+    //background-color: #ececee;
+    //background-color: #606266;
+    background-color: #F2F3F8;
+    border-radius: 5px;
+
+    .ant-menu-item-selected {
+      //background-color: #17c0f7;
+      background-color: gray;
+    }
+  }
+
+  .layout-content {
+    overflow-y: auto;
+    background-color: #FFFFFF;
+  }
+}
+
+
+
+
