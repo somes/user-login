@@ -1,5 +1,5 @@
 import axios from "axios";
-import {_getToken, _removeToken} from "../utils";
+import {_getToken, _removeToken} from "@/utils";
 
 const request = axios.create({
   baseURL: "http://localhost:8000",
