@@ -4,7 +4,7 @@ import './index.scss';
 import {Outlet, useLocation, useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {clearUserInfo, fetchUserInfo} from "../../store/modules/user";
+import {clearUserInfo, fetchUserInfo} from "@/store/modules/user";
 
 const {Header, Sider} = Layout
 
