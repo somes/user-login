@@ -8,6 +8,7 @@ import (
 )
 
 var r = gin.Default()
+var tr = gin.Default()
 
 func CollectRoute() *gin.Engine {
 	r.Use(middleware.CORSMiddleware())
@@ -17,4 +18,12 @@ func CollectRoute() *gin.Engine {
 	r.GET("/api/user/info", middleware.AuthMiddleware(), controller.InfoController)
 
 	return r
+}
+
+func TrCollectRoute() *gin.Engine {
+	tr.Use(middleware.CORSMiddleware())
+
+	tr.POST("/api/user/login", controller.LoginCertificateController)
+
+	return tr
 }

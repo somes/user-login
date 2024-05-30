@@ -21,7 +21,7 @@ func ReleaseToken(user model.User) (string, error) {
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: expirationTime.Unix(),
 			IssuedAt:  time.Now().Unix(),
-			Issuer:    "somes",
+			Issuer:    "system",
 			Subject:   "user token",
 		},
 	}

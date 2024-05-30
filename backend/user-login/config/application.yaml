@@ -1,10 +1,11 @@
 server:
   port: 8080
 datasource:
+  # driverName: mysql
   driverName: sqlite
-  # host: 192.168.2.10
+  # host: 192.168.2.216
   # port: 3306
-  # database: user-login
+  # database: user-service
   # username: root
   # password: 123456
   # charset: utf8mb4
