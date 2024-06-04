@@ -1,4 +1,4 @@
-## User-login
+## user-login
 
 This is a demonstration backend for a user login system that supports various authentication methods, including logging in with username and password, or with a digital certificate, as well as two-factor authentication.
 
