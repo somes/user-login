@@ -13,7 +13,7 @@ The project's configuration information is stored in the `config/application.yam
 go run cmd/main.go
 ```
 
-### Feature Set
+### Feature
 
 Below are the implemented and planned features of the project along with their completion status:
 
