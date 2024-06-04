@@ -1,24 +1,26 @@
 ## user-login
 
-这是一个演示用户登录系统的前端部分，支持多种认证方式，包括单独使用用户名密码登录或者数字证书登录，也可以使用双因素认证登录。
+This is the frontend part of a demonstration user login system that supports multiple authentication methods, including
+logging in with username/password alone or with a digital certificate. It also allows for two-factor authentication
+login.
 
-### 如何运行
+### How to Run
 
 ```bash
-npm install    # 安装依赖
-npm start      # 启动开发服务器
+npm install    # Install dependencies
+npm start      # Start development server
 ```
 
-### 功能特性
+### Features
 
-以下是项目中已经实现和计划实现的功能特性及其完成情况：
+Below are the implemented and planned features of the project along with their completion status:
 
-| 功能特性       | 完成情况    |
-|------------|---------|
-| 用户注册       | &#9744; |
-| 用户名 / 密码登录 | &#9745; |
-| 数字证书身份验证   | &#9744; |
-| 双因素认证      | &#9744; |
-| 用户管理       | &#9744; |
+| Feature                            | Status  |
+|------------------------------------|---------|
+| User registration                  | &#9744; |
+| Username / Password login          | &#9745; |
+| Digital certificate authentication | &#9744; |
+| Two-factor authentication          | &#9744; |
+| User management                    | &#9744; |
 
-**请注意：** 项目仍处于开发阶段，功能特性可能会有所变化。
+**Please Note:** The project is still in development, so feature specifications might change.
