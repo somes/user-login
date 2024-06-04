@@ -7,8 +7,10 @@ login.
 ### How to Run
 
 ```bash
-npm install    # Install dependencies
-npm start      # Start development server
+# Install dependencies
+npm install
+# Start development server
+npm start
 ```
 
 ### Features
