@@ -1,8 +1,6 @@
 ## user-login
 
-This is the frontend part of a demonstration user login system that supports multiple authentication methods, including
-logging in with username/password alone or with a digital certificate. It also allows for two-factor authentication
-login.
+This is the frontend part of a demonstration user login system that supports multiple authentication methods, including logging in with username/password alone or with a digital certificate. It also allows for two-factor authentication login.
 
 ### How to Run
 
@@ -25,4 +23,4 @@ Below are the implemented and planned features of the project along with their c
 | Two-factor authentication          | &#9744; |
 | User management                    | &#9744; |
 
-**Please Note:** The project is still in development, so feature specifications might change.
+**Note:** The project is still in development, and feature sets may be subject to change.
