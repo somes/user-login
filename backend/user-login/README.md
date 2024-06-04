@@ -1,28 +1,28 @@
-## user-login
+## User-login
 
-这是一个演示用户登录系统后端，支持多种认证方式，包括单独使用用户名密码登录或者数字证书登录，也可以使用双因素认证登录。
+This is a demonstration backend for a user login system that supports various authentication methods, including logging in with username and password, or with a digital certificate, as well as two-factor authentication.
 
-### 配置文件
+### Configuration File
 
-项目的配置信息存储在 `config/application.yaml` 文件中，其中包含了项目的运行端口和数据库连接信息。
+The project's configuration information is stored in the `config/application.yaml` file, which includes the project's running port and database connection information.
 
-### 如何运行
+### How to Run
 
 ```bash
-# 运行程序
+# Run the program
 go run cmd/main.go
 ```
 
-### 功能特性
+### Feature Set
 
-以下是项目中已经实现和计划实现的功能特性及其完成情况：
+Below are the implemented and planned feature sets along with their completion status in the project:
 
-| 功能特性       | 完成情况    |
+| Feature       | Completion |
 |------------|---------|
-| 用户注册       | &#9744; |
-| 用户名 / 密码登录 | &#9745; |
-| 数字证书身份验证   | &#9744; |
-| 双因素认证      | &#9744; |
-| 用户管理       | &#9744; |
+| User registration | &#9744; |
+| Username / password login | &#9745; |
+| Digital certificate authentication | &#9744; |
+| Two-factor authentication | &#9744; |
+| User management | &#9744; |
 
-**请注意：** 项目仍处于开发阶段，功能特性可能会有所变化。
+**Note:** The project is still in development, and feature sets may be subject to change.
