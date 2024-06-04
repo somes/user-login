@@ -15,12 +15,12 @@ go run cmd/main.go
 
 ### Feature Set
 
-Below are the implemented and planned feature sets along with their completion status in the project:
+Below are the implemented and planned features of the project along with their completion status:
 
 | Feature       | Completion |
 |------------|---------|
 | User registration | &#9744; |
-| Username / password login | &#9745; |
+| Username / Password login | &#9745; |
 | Digital certificate authentication | &#9744; |
 | Two-factor authentication | &#9744; |
 | User management | &#9744; |
